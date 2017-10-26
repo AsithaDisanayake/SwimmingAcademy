@@ -32,7 +32,7 @@
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
-
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
             <div class="modal-footer">
                 <div class="btn-group btn-group-justified" role="group" aria-label="group button">
@@ -45,6 +45,7 @@
                     <div class="btn-group" role="group">
                         <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
                     </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
             </div>
         </div>
