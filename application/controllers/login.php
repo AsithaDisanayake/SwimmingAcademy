@@ -21,6 +21,7 @@ class login extends CI_Controller{
              //Create dara array to get user Data
                 $user_data = array(
                     'username'=>$result->username,
+                    'usertype'=>$result->usertype,
                     //to check logged in
                     'loggedin'=>TRUE
             );
@@ -28,8 +29,18 @@ class login extends CI_Controller{
              //Create Session to Adding Data. Get user details
                 $this->session->set_userdata($user_data);
                 $this->session->set_flashdata('welcomeMsg',"Welcome");
+
+                if($result->usertype == "user"){
+                    //direct to userDashboard controller and call index function
+                    redirect('userDashboard/index');
+                } elseif($result->usertype == "admin"){
+
+                    redirect('adminDashboard/index');
+                }
+
+
              //direct to userDashboard controller and call index function
-                redirect('userDashboard/index');
+                  redirect('adminDashboard/index');
 
 
             }else{
